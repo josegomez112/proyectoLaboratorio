@@ -24,7 +24,7 @@ app.use(express.static('public'));
 app.get('/api/datos', async (req, res) => {
   try {
     await sql.connect(config);
-    const result = await sql.query('SELECT * FROM Anos');
+    const result = await sql.query('SELECT * FROM Dias');
     res.json(result.recordset);
   } catch (err) {
     res.status(500).send(err.message);
