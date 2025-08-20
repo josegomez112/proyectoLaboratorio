@@ -2,15 +2,15 @@
 
 new gridjs.Grid({
     columns: [
-        { id: "id", name: "ID" },
-        { id: "title", name: "Titulo" },
-        { id: "body", name: "Contenido" }
+        { id: "IdDia", name: "idDia" },
+        { id: "CodigoDia", name: "codigoDia" },
+        { id: "DescripcionDia", name: "descripcionDia" }
         ],
       
         sort: true,
         server: {
-            url: "https://jsonplaceholder.typicode.com/posts",
-            then: data => data.map(post => [post.id, post.title, post.body])
+            url: "http://localhost:4000/api/datos",
+            then: data => data.map(post => [post.Iddia, post.CodigoDia, post.DescripcionDia])
             },
             pagination: true,
             search: true,

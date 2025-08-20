@@ -1,6 +1,6 @@
 .boton-enlace {
-    display: inline-lack;
-    padding: 20px 30px;
+    display: inline-flex;
+    padding: 10px 20px;
     font-size: 20px;
     color: white;
     background-color: #007BFF;
@@ -8,8 +8,14 @@
     text-decoration: none;
     border-radius: 5px;
     margin: 10px;
+    margin-bottom: 10px;
     transition: backgroud-color 0.3s ease;
     }
     .boton-enlace:hover {
         background-color: #0056b3;
         }
+
+body{
+
+    text-align: center;
+}
