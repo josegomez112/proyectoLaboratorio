@@ -1,4 +1,6 @@
 .boton-enlace {
+
+    border: none;
     display: inline-flex;
     padding: 10px 20px;
     font-size: 20px;
@@ -15,7 +17,21 @@
         background-color: #0056b3;
         }
 
+h1{
+    margin-bottom: 40px;
+}
+
 body{
 
     text-align: center;
+}
+
+input{
+    border: none;
+    border-bottom: 2px grey solid;
+    text-align: center;
+    padding: 5px;
+}
+body{
+    font-family: sans-serif;
 }
