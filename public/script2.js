@@ -2,17 +2,18 @@
 
 new gridjs.Grid({
     columns: [
-        { id: "PersonaId", name: "PersonaId" },
+        { id: "PersonaID", name: "IdPersona" },
         { id: "Apellido", name: "Apellido" },
         { id: "Nombre", name: "Nombre"},
         { id: "DNI", name: "DNI" },
-        { id: "fechaNacimiento:", name: "fechaNacimeminto"}
+        { id: "Email", name: "email" },
+        { id: "FechaNacimiento", name: "FechaNacimiento"}
         ],
     
         sort: true,
         server: {
             url: "http://localhost:4000/api/personas",
-            then: data => data.map(post => [post.PersonaId, post.Apellido, post.Nombre, post.Email, post.DNI, post.FechaNacimiento])
+            then: data => data.map(post => [post.PersonaID, post.Apellido, post.Nombre, post.DNI, post.Email, post.FechaNacimiento])
             },
             pagination: true,
             search: true,
