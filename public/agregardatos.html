@@ -1,41 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./boton.css    ">
-    <title>Ingresar datos </title>
+    <link rel="stylesheet" href="./boton.css">
+    <title>Ingresar Datos</title>
 </head>
 <body>
-    <h1> Agregar datos</h1>
-    <label >Nombre: </label>
-    <input id="Nombre" type="text" placeholder="Ingrese Nombre" />
-    <br>
-    <br>
-    <label >Apellido: </label>
-    <input id="Apellido" type="text" placeholder="Ingrese Apellido" />
-    <br>
-    <br>
-    <label >dni: </label>
-    <input id="dni" type="text" placeholder="Ingrese dni">
-    <br>
-    <br>
-    <label >FechaNacimiento: </label>
-    <input id="FechaNacimiento" type="text" placeholder="Ingrese Fecha de Nacimiento">
-    <br>
-    <br>
-    <label >email: </label>
-    <input id="email" type="text" placeholder="Ingrese email">
-    <br>
-    <br>
+    <div class="form-container">
+        <h1>Agregar Datos</h1>
+        <div class="form-group">
+            <label for="Nombre">Nombre:</label>
+            <input id="Nombre" type="text" placeholder="Ingrese Nombre" required />
+        </div>
+        <div class="form-group">
+            <label for="Apellido">Apellido:</label>
+            <input id="Apellido" type="text" placeholder="Ingrese Apellido" required />
+        </div>
+        <div class="form-group">
+            <label for="dni">DNI:</label>
+            <input id="dni" type="text" placeholder="Ingrese DNI" required />
+        </div>
+        <div class="form-group">
+            <label for="FechaNacimiento">Fecha de Nacimiento:</label>
+            <input id="FechaNacimiento" type="date" placeholder="Ingrese Fecha de Nacimiento" required />
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="Ingrese Email" required />
+        </div>
+        <div class="form-group">
+            <label for="operacion">Operación:</label>
+            <input id="operacion" type="text" placeholder="Ingrese Operación" required />
+        </div>
 
-<button  id="grabar" class="boton-enlace">grabar</button>
-<br>
-<br>
-
-    <a href="#" id="retroceder" href="./index.html" class="boton-enlace">Atras</a>
+        <button id="grabar" class="boton-enlace primary">Grabar</button>
+        <a href="./index.html" id="retroceder" class="boton-enlace secondary">Atrás</a>
+    </div>
 
     <script src="./agregardatos.js"></script>
-    
 </body>
 </html>

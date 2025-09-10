@@ -1,37 +1,126 @@
+/* Paleta de Colores Profesional y Moderna */
+:root {
+    --primary-color: #3f51b5; /* Un azul índigo oscuro */
+    --secondary-color: #f5f5f5; /* Gris muy claro para el fondo */
+    --accent-color: #00bcd4; /* Azul cian para detalles */
+    --text-color-dark: #333; /* Texto oscuro */
+    --text-color-light: #fff; /* Texto claro */
+    --background-color: #f0f2f5; /* Un gris muy suave para el fondo de la página */
+    --card-bg-color: #fff; /* Blanco para los contenedores */
+    --border-color: #e0e0e0; /* Gris para bordes */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos Generales del Cuerpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-color-dark);
+}
+
+.main-container {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.page-title {
+    color: var(--text-color-dark);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de la Tabla - Aspecto de Base de Datos */
+.table-container {
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+/* Estilos de los botones - Más sobrios */
 .boton-enlace {
-
-    border: none;
     display: inline-flex;
-    padding: 10px 20px;
-    font-size: 20px;
-    color: white;
-    background-color: #007BFF;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color-light);
     text-decoration: none;
-    border-radius: 5px;
-    margin: 10px;
-    margin-bottom: 10px;
-    transition: backgroud-color 0.3s ease;
-    }
-    .boton-enlace:hover {
-        background-color: #0056b3;
-        }
-
-h1{
-    margin-bottom: 40px;
-}
-
-body{
-
-    text-align: center;
-}
-
-input{
+    border-radius: 8px;
+    margin: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
     border: none;
-    border-bottom: 2px grey solid;
-    text-align: center;
-    padding: 5px;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(63, 81, 181, 0.2);
 }
-body{
-    font-family: sans-serif;
+
+.boton-enlace.add-button {
+    background-color: var(--primary-color);
+}
+
+.boton-enlace:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(63, 81, 181, 0.3);
+    filter: brightness(1.1);
+}
+
+/* Estilos para el formulario de ingreso de datos */
+/* Puedes mantener tus estilos de .form-container, input, etc. aquí para que ambos HTML usen el mismo CSS */
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color-dark);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: var(--text-color-dark);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.2);
+    outline: none;
+}
+
+.boton-enlace.primary, .boton-enlace.secondary {
+    background-color: var(--primary-color);
+}
+.boton-enlace.secondary {
+    background-color: #9e9e9e; /* Gris para el botón de retroceso */
 }

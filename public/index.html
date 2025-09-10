@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mitrabajo</title>
-    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
-    rel= "stylesheet" />
+    <title>Base de Datos de Personas</title>
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./boton.css">
 </head>
 <body>
-    <h1> titulo de la pagina</h1>
-    <a href="./agregardatos.html" class="boton-enlace">AGREGAR DATOS</a>
-
-    <div id="wrapper"></div>
-  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-    <script src= "./script2.js"  ></script>
+    <div class="main-container">
+        <h1 class="page-title">Base de Datos de Personas</h1>
+        <a href="./agregardatos.html" class="boton-enlace add-button">Agregar Datos</a>
+        <div id="wrapper" class="table-container"></div>
+    </div>
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <script src="./script2.js"></script>
 </body>
 </html>

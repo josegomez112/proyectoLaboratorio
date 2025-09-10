@@ -22,7 +22,7 @@ app.use(express.static('public'));
 
 app.post('/save-personas', async(req, res)=> {
 
-  const {Nombre, Apellido,  dni, email, FechaNacimiento} = req.body;
+  const {Nombre, Apellido,  dni, email, FechaNacimiento, operacion} = req.body;
   //const {Apellido, Nombre, DNI, Email, FechaNacimiento} = req.body;
   try{
         await sql.connect(config);
@@ -32,8 +32,9 @@ app.post('/save-personas', async(req, res)=> {
         request.input('dni', sql.VarChar, dni);
         request.input('email', sql.VarChar, email);
         request.input('FechaNacimiento', sql.VarChar, FechaNacimiento);
+        request.input('operacion', sql.VarChar, operacion);
         const result = await request.query(
-          'INSERT INTO Personas ( Nombre, Apellido, DNI, Email, FechaNacimiento) VALUES (@Nombre, @Apellido, @dni,  @email, @FechaNacimiento)'
+          'INSERT INTO Personas ( Nombre, Apellido, DNI, Email, FechaNacimiento, Operacion) VALUES (@Nombre, @Apellido, @dni,  @email, @FechaNacimiento, @operacion)'
         );
         console.log(result);
         res.send('Datos guardados exitosamente! ');

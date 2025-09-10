@@ -1,5 +1,3 @@
-
-
 new gridjs.Grid({
     columns: [
         { id: "PersonaID", name: "IdPersona" },
@@ -7,24 +5,32 @@ new gridjs.Grid({
         { id: "Nombre", name: "Nombre"},
         { id: "DNI", name: "DNI" },
         { id: "Email", name: "email" },
-        { id: "FechaNacimiento", name: "FechaNacimiento"}
-        ],
-    
-        sort: true,
-        server: {
-            url: "http://localhost:4000/api/personas",
-            then: data => data.map(post => [post.PersonaID, post.Apellido, post.Nombre, post.DNI, post.Email, post.FechaNacimiento])
-            },
-            pagination: true,
-            search: true,
-            language: {
-                "search": "buscar...",
-                "pagination": {
-                    "previous": "anterior",
-                    "next": "siguiente",
-                    "of": "de",
-                    "results": "resultados",
-                    "to": "a"
-                    }
-                    }
-                }).render(document.getElementById("wrapper"));
+        { id: "FechaNacimiento", name: "FechaNacimiento"},
+        { 
+          id: "operacion", 
+          name: "operacion",
+          // Aquí se agrega el 'formatter' para crear un enlace
+          formatter: (cell) => gridjs.h('a', {
+            href: 'https://www.google.com'
+          }, cell)
+        }
+    ],
+    sort: true,
+    server: {
+        url: "http://localhost:4000/api/personas",
+        // Esta línea se mantiene para que los datos se procesen correctamente
+        then: data => data.map(post => [post.PersonaID, post.Apellido, post.Nombre, post.DNI, post.Email, post.FechaNacimiento, 'hola'])
+    },
+    pagination: true,
+    search: true,
+    language: {
+        "search": "buscar...",
+        "pagination": {
+            "previous": "anterior",
+            "next": "siguiente",
+            "of": "de",
+            "results": "resultados",
+            "to": "a"
+        }
+    }
+}).render(document.getElementById("wrapper"));
