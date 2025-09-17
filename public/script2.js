@@ -10,9 +10,16 @@ new gridjs.Grid({
           id: "operacion", 
           name: "operacion",
           // Aquí se agrega el 'formatter' para crear un enlace
-          formatter: (cell) => gridjs.h('a', {
-            href: 'https://www.google.com'
-          }, cell)
+          formatter: (cell, row) =>  {
+            const PersonaID = row.cell[0].data;
+            return gridjs.html('<a href="./modificardatos.html?parametro=${PersonaID}">texto</a>')
+
+            /*
+            const variable = row.cell[0].data;
+            return gridjs.html(`<a href="./modificardatos.html?parametro=${variable}">texto</a>`)
+            
+            */
+          }, 
         }
     ],
     sort: true,
